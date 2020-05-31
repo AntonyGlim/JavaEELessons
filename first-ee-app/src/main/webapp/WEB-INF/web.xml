@@ -6,4 +6,23 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
+  <servlet>
+    <servlet-name>ExampleServlet</servlet-name>
+    <servlet-class>glim.antony.lesson1.servlets.examples.ExampleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExampleServlet</servlet-name>
+    <url-pattern>/example</url-pattern>
+  </servlet-mapping>
+
+<!--  errors-->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/error403</location>
+  </error-page>
+
 </web-app>
