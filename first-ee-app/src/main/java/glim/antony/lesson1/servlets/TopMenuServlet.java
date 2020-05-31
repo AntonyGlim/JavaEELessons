@@ -13,7 +13,9 @@ public class TopMenuServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String activeEndpointName = (String) req.getAttribute("activeEndpointName");
         req.getRequestURL();
-        String rootPath = "http://" +  req.getServerName() + ":" + req.getServerPort() + req.getContextPath();
+
+        String rootPath = "http://" +  req.getServerName() + ":" + req.getServerPort() + req.getContextPath(); //http://127.0.0.1:8080/first-ee-app/main
+
         resp.getWriter().println("<div>");
         resp.getWriter().printf("<a %s href=\"%s/main\">Main</a>", activeEndpointName.equals("/main") ? "class=\"active\"" : "", rootPath);
         resp.getWriter().printf("<a %s href=\"%s/catalog\">Catalog</a>", activeEndpointName.equals("/catalog") ? "class=\"active\"" : "", rootPath);
