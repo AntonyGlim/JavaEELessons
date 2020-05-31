@@ -11,8 +11,6 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("activeEndpointName", req.getServletPath());
-        getServletContext().getRequestDispatcher("/topmenu").include(req, resp);
-        resp.getWriter().println("MainServlet");
+        resp.getWriter().println("<h1>MainServlet</h1>");
     }
 }
