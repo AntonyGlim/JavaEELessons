@@ -15,6 +15,7 @@ public class TopMenuServlet extends HttpServlet {
         req.getRequestURL();
 
         String rootPath = "http://" +  req.getServerName() + ":" + req.getServerPort() + req.getContextPath(); //http://127.0.0.1:8080/first-ee-app/main
+//        String rootPath = "/" + req.getContextPath() + "/main";
 
         resp.getWriter().println("<div>");
         resp.getWriter().printf("<a %s href=\"%s/main\">Main</a>", activeEndpointName.equals("/main") ? "class=\"active\"" : "", rootPath);
