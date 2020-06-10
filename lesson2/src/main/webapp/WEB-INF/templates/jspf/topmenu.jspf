@@ -1,0 +1,14 @@
+<%@ page pageEncoding="UTF-8" %>
+<ul style="list-style-type: none">
+    <li style="display: inline-block"><a href="index">Главная</a></li>
+    <li style="display: inline-block"><a href="profile">Профиль</a></li>
+    <li style="display: inline-block"><a href="projects">Проекты</a></li>
+    <li style="display: inline-block"><a href="contacts">Контакты</a></li>
+</ul>
+
+<%--<c:url value="/profile" var="profileURL"></c:url>--%>
+<%--<a href="${profileURL}">profile</a>--%>
+<%--<c:url value="/projects" var="projectsURL"></c:url>--%>
+<%--<a href="${projectsURL}">projects</a>--%>
+<%--<c:url value="/contacts" var="contactsURL"></c:url>--%>
+<%--<a href="${contactsURL}">contacts</a>--%>

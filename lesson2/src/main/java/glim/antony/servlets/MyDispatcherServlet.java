@@ -26,7 +26,23 @@ public class MyDispatcherServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("projects", projects);
-        getServletContext().getRequestDispatcher("/WEB-INF/templates/jsp/projects.jsp").forward(req, resp);
+        switch (req.getServletPath()) {
+            case "/":
+            case "/index":
+                getServletContext().getRequestDispatcher("/WEB-INF/templates/jsp/index.jsp").forward(req, resp);
+                break;
+            case "/projects":
+                req.setAttribute("projects", projects);
+                getServletContext().getRequestDispatcher("/WEB-INF/templates/jsp/projects.jsp").forward(req, resp);
+                break;
+            case "/profile":
+                getServletContext().getRequestDispatcher("/WEB-INF/templates/jsp/profile.jsp").forward(req, resp);
+                break;
+            case "/contacts":
+                getServletContext().getRequestDispatcher("/WEB-INF/templates/jsp/contacts.jsp").forward(req, resp);
+                break;
+            default:
+                resp.sendError(HttpServletResponse.SC_NOT_FOUND);
+        }
     }
 }
