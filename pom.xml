@@ -10,8 +10,11 @@
     <modules>
         <module>first-ee-app</module>
         <module>lesson2</module>
+        <module>lesson3-jsf</module>
+        <module>lesson4-jsf</module>
     </modules>
     <packaging>pom</packaging>
+
 
 
 </project>
